@@ -1,0 +1,220 @@
+/* ============ HEADER ============ */
+header.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 64px;
+    gap: 32px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo {
+    width: 44px;
+    height: 44px;
+    background: var(--accent);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg);
+    box-shadow: 0 0 24px rgba(0, 212, 170, 0.3);
+    position: relative;
+}
+
+.logo svg {
+    width: 22px;
+    height: 22px;
+    position: relative;
+    z-index: 1;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    inset: 1px;
+    background: linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.15) 50%, transparent 100%);
+    border-radius: 9px;
+    pointer-events: none;
+}
+
+.brand-text h1 {
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1;
+}
+
+.brand-text .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-3);
+    letter-spacing: 0.05em;
+    margin-top: 4px;
+    text-transform: lowercase;
+}
+
+.header-meta {
+    display: flex;
+    gap: 28px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-3);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    align-items: center;
+    padding-top: 8px;
+}
+
+.header-meta div {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.header-meta .label {
+    color: var(--text-3);
+}
+
+.header-meta .val {
+    color: var(--text);
+    font-weight: 500;
+}
+
+.pulse-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* ============ HERO ============ */
+.hero {
+    margin-bottom: 56px;
+}
+
+.hero h2 {
+    font-size: clamp(40px, 6vw, 68px);
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    margin-bottom: 20px;
+    max-width: 720px;
+}
+
+.hero h2 .accent {
+    color: var(--accent);
+    font-style: italic;
+    font-weight: 600;
+}
+
+.hero h2 .strike {
+    position: relative;
+    color: var(--text-2);
+}
+
+.hero p.lede {
+    font-size: 16px;
+    color: var(--text-2);
+    max-width: 580px;
+    line-height: 1.55;
+}
+
+/* ============ SECTION ============ */
+section {
+    margin-bottom: 56px;
+}
+
+.section-bar {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.section-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    background: var(--accent-dim);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.section-meta {
+    margin-left: auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-3);
+    letter-spacing: 0.05em;
+}
+
+/* ============ FOOTER ============ */
+.footer {
+    margin-top: 80px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.footer h4 {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+}
+
+.footer p,
+.footer li {
+    font-size: 13px;
+    color: var(--text-2);
+    line-height: 1.55;
+    margin-bottom: 8px;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer li::before {
+    content: '— ';
+    color: var(--text-3);
+}
+
+.footer code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    background: var(--surface-2);
+    padding: 1px 5px;
+    border-radius: 3px;
+    color: var(--accent);
+}
+
+.footer .colophon {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-soft);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--text-3);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}

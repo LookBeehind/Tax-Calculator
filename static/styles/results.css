@@ -1,0 +1,179 @@
+/* ============ RESULTS ============ */
+#results {
+    display: none;
+}
+
+#results.shown {
+    display: block;
+    animation: fadeIn 0.4s ease-out;
+}
+
+/* Top stats grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 22px;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card.highlight {
+    background: linear-gradient(135deg, var(--surface) 0%, var(--accent-dim) 100%);
+    border-color: var(--accent);
+}
+
+.stat-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--text-3);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 10px;
+}
+
+.stat-value {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+}
+
+.stat-value.pos {
+    color: var(--pos);
+}
+
+.stat-value.neg {
+    color: var(--neg);
+}
+
+.stat-value sub {
+    font-size: 12px;
+    color: var(--text-3);
+    font-weight: 500;
+    margin-left: 4px;
+    vertical-align: baseline;
+    letter-spacing: 0;
+}
+
+.stat-sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-2);
+    margin-top: 6px;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Year tabs */
+.year-tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 4px;
+    overflow-x: auto;
+}
+
+.year-tab {
+    background: transparent;
+    border: none;
+    color: var(--text-2);
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.year-tab:hover {
+    color: var(--text);
+    background: var(--surface-2);
+}
+
+.year-tab.active {
+    background: var(--surface-3);
+    color: var(--text);
+}
+
+.year-tab .pl-pill {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.year-tab .pl-pill.pos {
+    background: var(--accent-dim);
+    color: var(--accent);
+}
+
+.year-tab .pl-pill.neg {
+    background: var(--neg-dim);
+    color: var(--neg);
+}
+
+/* Year content */
+.year-content {
+    display: none;
+}
+
+.year-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.year-summary {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.year-summary .ys-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.year-summary .ys-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--text-3);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.year-summary .ys-value {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    font-variant-numeric: tabular-nums;
+}
+
+.year-summary .ys-sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-3);
+    font-variant-numeric: tabular-nums;
+}
